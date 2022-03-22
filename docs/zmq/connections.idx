@@ -1,0 +1,33 @@
+ZmqError	zmq/connections.html#ZmqError	connections: ZmqError	
+ZConnection	zmq/connections.html#ZConnection	connections: ZConnection	
+zmqError	zmq/connections.html#zmqError_2	connections: zmqError()	
+newZContext	zmq/connections.html#newZContext	connections: newZContext(): ZContext	
+newZContext	zmq/connections.html#newZContext,int,int	connections: newZContext(option: int; optval: int): ZContext	
+newZContext	zmq/connections.html#newZContext,int	connections: newZContext(numthreads: int): ZContext	
+terminate	zmq/connections.html#terminate,ZContext	connections: terminate(ctx: ZContext)	
+setsockopt	zmq/connections.html#setsockopt,ZSocket,ZSockOptions,T	connections: setsockopt[T: SomeOrdinal | string](s: ZSocket; option: ZSockOptions; optval: T)	
+setsockopt	zmq/connections.html#setsockopt,ZConnection,ZSockOptions,T	connections: setsockopt[T: SomeOrdinal | string](c: ZConnection; option: ZSockOptions;\n                                    optval: T)	
+getsockopt	zmq/connections.html#getsockopt,ZSocket,ZSockOptions	connections: getsockopt[T: SomeOrdinal | string](s: ZSocket; option: ZSockOptions): T	
+getsockopt	zmq/connections.html#getsockopt,ZConnection,ZSockOptions	connections: getsockopt[T: SomeOrdinal | string](c: ZConnection; option: ZSockOptions): T	
+reconnect	zmq/connections.html#reconnect,ZConnection	connections: reconnect(conn: ZConnection)	
+reconnect	zmq/connections.html#reconnect,ZConnection,string	connections: reconnect(conn: var ZConnection; address: string)	
+disconnect	zmq/connections.html#disconnect,ZConnection	connections: disconnect(conn: ZConnection)	
+unbind	zmq/connections.html#unbind,ZConnection	connections: unbind(conn: ZConnection)	
+bindAddr	zmq/connections.html#bindAddr,ZConnection,string	connections: bindAddr(conn: var ZConnection; address: string)	
+connect	zmq/connections.html#connect,string,ZSocketType,ZContext	connections: connect(address: string; mode: ZSocketType; context: ZContext): ZConnection	
+connect	zmq/connections.html#connect,string,ZSocketType	connections: connect(address: string; mode: ZSocketType): ZConnection	
+listen	zmq/connections.html#listen,string,ZSocketType,ZContext	connections: listen(address: string; mode: ZSocketType; context: ZContext): ZConnection	
+listen	zmq/connections.html#listen,string,ZSocketType	connections: listen(address: string; mode: ZSocketType): ZConnection	
+close	zmq/connections.html#close,ZConnection,int	connections: close(c: var ZConnection; linger: int = 500)	
+send	zmq/connections.html#send,ZSocket,string,ZSendRecvOptions	connections: send(s: ZSocket; msg: string; flags: ZSendRecvOptions = NOFLAGS)	
+sendAll	zmq/connections.html#sendAll,ZSocket,varargs[string]	connections: sendAll(s: ZSocket; msg: varargs[string])	
+send	zmq/connections.html#send,ZConnection,string,ZSendRecvOptions	connections: send(c: ZConnection; msg: string; flags: ZSendRecvOptions = NOFLAGS)	
+sendAll	zmq/connections.html#sendAll,ZConnection,varargs[string]	connections: sendAll(c: ZConnection; msg: varargs[string])	
+tryReceive	zmq/connections.html#tryReceive,ZSocket,ZSendRecvOptions	connections: tryReceive(s: ZSocket; flags: ZSendRecvOptions = NOFLAGS): tuple[\n    msgAvailable: bool, moreAvailable: bool, msg: string]	
+receive	zmq/connections.html#receive,ZSocket,ZSendRecvOptions	connections: receive(s: ZSocket; flags: ZSendRecvOptions = NOFLAGS): string	
+receiveAll	zmq/connections.html#receiveAll,ZSocket,ZSendRecvOptions	connections: receiveAll(s: ZSocket; flags: ZSendRecvOptions = NOFLAGS): seq[string]	
+tryReceive	zmq/connections.html#tryReceive,ZConnection,ZSendRecvOptions	connections: tryReceive(c: ZConnection; flags: ZSendRecvOptions = NOFLAGS): tuple[\n    msgAvailable: bool, moreAvailable: bool, msg: string]	
+receive	zmq/connections.html#receive,ZConnection,ZSendRecvOptions	connections: receive(c: ZConnection; flags: ZSendRecvOptions = NOFLAGS): string	
+receiveAll	zmq/connections.html#receiveAll,ZConnection,ZSendRecvOptions	connections: receiveAll(c: ZConnection; flags: ZSendRecvOptions = NOFLAGS): seq[string]	
+proxy	zmq/connections.html#proxy,ZConnection,ZConnection	connections: proxy(frontend, backend: ZConnection)	
+proxy	zmq/connections.html#proxy,ZConnection,ZConnection,ZConnection	connections: proxy(frontend, backend, capture: ZConnection)	

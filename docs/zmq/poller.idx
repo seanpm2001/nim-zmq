@@ -1,0 +1,13 @@
+ZPoller	zmq/poller.html#ZPoller	poller: ZPoller	
+`[]`	zmq/poller.html#[],ZPoller,int	poller: `[]`(poller: ZPoller; idx: int): lent ZPollItem	
+len	zmq/poller.html#len,ZPoller	poller: len(poller: ZPoller): int	
+poll	zmq/poller.html#poll,openArray[ZPollItem],int64	poller: poll(items: openArray[ZPollItem]; timeout: int64): int32	
+register	zmq/poller.html#register,ZPoller,ZSocket,int	poller: register(poller: var ZPoller; sock: ZSocket; event: int)	
+register	zmq/poller.html#register,ZPoller,ZConnection,int	poller: register(poller: var ZPoller; conn: ZConnection; event: int)	
+initZPoller	zmq/poller.html#initZPoller,openArray[ZConnection],cshort	poller: initZPoller(items: openArray[ZConnection]; event: cshort): ZPoller	
+initZPoller	zmq/poller.html#initZPoller,openArray[ZSocket],cshort	poller: initZPoller(items: openArray[ZSocket]; event: cshort): ZPoller	
+initZPoller	zmq/poller.html#initZPoller,openArray[tuple[ZSocket,cshort]]	poller: initZPoller(items: openArray[tuple[sock: ZSocket, event: cshort]]): ZPoller	
+initZPoller	zmq/poller.html#initZPoller,openArray[tuple[ZConnection,cshort]]	poller: initZPoller(items: openArray[tuple[con: ZConnection, event: cshort]]): ZPoller	
+poll	zmq/poller.html#poll,ZPoller,int64	poller: poll(poller: ZPoller; timeout: int64): int32	
+events	zmq/poller.html#events,ZPollItem,int	poller: events(p: ZPollItem; events: int): bool	
+events	zmq/poller.html#events,ZPollItem	poller: events(p: ZPollItem): bool	

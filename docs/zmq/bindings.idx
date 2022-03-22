@@ -1,0 +1,299 @@
+zmqdll	zmq/bindings.html#zmqdll	bindings: zmqdll	
+ZMQ_VERSION_MAJOR	zmq/bindings.html#ZMQ_VERSION_MAJOR	bindings: ZMQ_VERSION_MAJOR	
+ZMQ_VERSION_MINOR	zmq/bindings.html#ZMQ_VERSION_MINOR	bindings: ZMQ_VERSION_MINOR	
+ZMQ_VERSION_PATCH	zmq/bindings.html#ZMQ_VERSION_PATCH	bindings: ZMQ_VERSION_PATCH	
+ZMQ_MAKE_VERSION	zmq/bindings.html#ZMQ_MAKE_VERSION.t,untyped,untyped,untyped	bindings: ZMQ_MAKE_VERSION(major, minor, patch: untyped): untyped	
+ZMQ_VERSION	zmq/bindings.html#ZMQ_VERSION	bindings: ZMQ_VERSION	
+ENOTSUP	zmq/bindings.html#ENOTSUP	bindings: ENOTSUP	
+EPROTONOSUPPORT	zmq/bindings.html#EPROTONOSUPPORT	bindings: EPROTONOSUPPORT	
+ENOBUFS	zmq/bindings.html#ENOBUFS	bindings: ENOBUFS	
+ENETDOWN	zmq/bindings.html#ENETDOWN	bindings: ENETDOWN	
+EADDRINUSE	zmq/bindings.html#EADDRINUSE	bindings: EADDRINUSE	
+EADDRNOTAVAIL	zmq/bindings.html#EADDRNOTAVAIL	bindings: EADDRNOTAVAIL	
+ECONNREFUSED	zmq/bindings.html#ECONNREFUSED	bindings: ECONNREFUSED	
+EINPROGRESS	zmq/bindings.html#EINPROGRESS	bindings: EINPROGRESS	
+ENOTSOCK	zmq/bindings.html#ENOTSOCK	bindings: ENOTSOCK	
+EMSGSIZE	zmq/bindings.html#EMSGSIZE	bindings: EMSGSIZE	
+EAFNOSUPPORT	zmq/bindings.html#EAFNOSUPPORT	bindings: EAFNOSUPPORT	
+ENETUNREACH	zmq/bindings.html#ENETUNREACH	bindings: ENETUNREACH	
+ECONNABORTED	zmq/bindings.html#ECONNABORTED	bindings: ECONNABORTED	
+ECONNRESET	zmq/bindings.html#ECONNRESET	bindings: ECONNRESET	
+ENOTCONN	zmq/bindings.html#ENOTCONN	bindings: ENOTCONN	
+ETIMEDOUT	zmq/bindings.html#ETIMEDOUT	bindings: ETIMEDOUT	
+EHOSTUNREACH	zmq/bindings.html#EHOSTUNREACH	bindings: EHOSTUNREACH	
+ENETRESET	zmq/bindings.html#ENETRESET	bindings: ENETRESET	
+EFSM	zmq/bindings.html#EFSM	bindings: EFSM	
+ENOCOMPATPROTO	zmq/bindings.html#ENOCOMPATPROTO	bindings: ENOCOMPATPROTO	
+ETERM	zmq/bindings.html#ETERM	bindings: ETERM	
+EMTHREAD	zmq/bindings.html#EMTHREAD	bindings: EMTHREAD	
+version	zmq/bindings.html#version,cint,cint,cint	bindings: version(major: var cint; minor: var cint; patch: var cint)	
+ZMQ_EAGAIN	zmq/bindings.html#ZMQ_EAGAIN	bindings: ZMQ_EAGAIN	
+errno	zmq/bindings.html#errno	bindings: errno(): cint	
+strerror	zmq/bindings.html#strerror,cint	bindings: strerror(errnum: cint): cstring	
+ZSocket	zmq/bindings.html#ZSocket	bindings: ZSocket	
+ZContext	zmq/bindings.html#ZContext	bindings: ZContext	
+ZMQ_IO_THREADS	zmq/bindings.html#ZMQ_IO_THREADS	bindings: ZMQ_IO_THREADS	
+ZMQ_MAX_SOCKETS	zmq/bindings.html#ZMQ_MAX_SOCKETS	bindings: ZMQ_MAX_SOCKETS	
+ZMQ_SOCKET_LIMIT	zmq/bindings.html#ZMQ_SOCKET_LIMIT	bindings: ZMQ_SOCKET_LIMIT	
+ZMQ_THREAD_PRIORITY	zmq/bindings.html#ZMQ_THREAD_PRIORITY	bindings: ZMQ_THREAD_PRIORITY	
+ZMQ_THREAD_SCHED_POLICY	zmq/bindings.html#ZMQ_THREAD_SCHED_POLICY	bindings: ZMQ_THREAD_SCHED_POLICY	
+IO_THREADS	zmq/bindings.html#IO_THREADS	ZContextOptions.IO_THREADS	
+MAX_SOCKETS	zmq/bindings.html#MAX_SOCKETS	ZContextOptions.MAX_SOCKETS	
+ZMQ_IPV6	zmq/bindings.html#ZMQ_IPV6	ZContextOptions.ZMQ_IPV6	
+ZContextOptions	zmq/bindings.html#ZContextOptions	bindings: ZContextOptions	
+ZMQ_IO_THREADS_DFLT	zmq/bindings.html#ZMQ_IO_THREADS_DFLT	bindings: ZMQ_IO_THREADS_DFLT	
+ZMQ_MAX_SOCKETS_DFLT	zmq/bindings.html#ZMQ_MAX_SOCKETS_DFLT	bindings: ZMQ_MAX_SOCKETS_DFLT	
+ZMQ_THREAD_PRIORITY_DFLT	zmq/bindings.html#ZMQ_THREAD_PRIORITY_DFLT	bindings: ZMQ_THREAD_PRIORITY_DFLT	
+ZMQ_THREAD_SCHED_POLICY_DFLT	zmq/bindings.html#ZMQ_THREAD_SCHED_POLICY_DFLT	bindings: ZMQ_THREAD_SCHED_POLICY_DFLT	
+ctx_new	zmq/bindings.html#ctx_new	bindings: ctx_new(): ZContext	
+ctx_term	zmq/bindings.html#ctx_term,ZContext	bindings: ctx_term(context: ZContext): cint	
+ctx_shutdown	zmq/bindings.html#ctx_shutdown,ZContext	bindings: ctx_shutdown(ctx: ZContext): cint	
+ctx_set	zmq/bindings.html#ctx_set,ZContext,cint,cint	bindings: ctx_set(context: ZContext; option: cint; optval: cint): cint	
+ctx_get	zmq/bindings.html#ctx_get,ZContext,cint	bindings: ctx_get(context: ZContext; option: cint): cint	
+init	zmq/bindings.html#init,cint	bindings: init(io_threads: cint): ZContext	
+term	zmq/bindings.html#term,ZContext	bindings: term(context: ZContext): cint	
+ctx_destroy	zmq/bindings.html#ctx_destroy,ZContext	bindings: ctx_destroy(context: ZContext): cint	
+ZMsg	zmq/bindings.html#ZMsg	bindings: ZMsg	
+msg_init	zmq/bindings.html#msg_init,ZMsg	bindings: msg_init(msg: var ZMsg): cint	
+msg_init	zmq/bindings.html#msg_init,ZMsg,int	bindings: msg_init(msg: var ZMsg; size: int): cint	
+msg_init	zmq/bindings.html#msg_init,ZMsg,cstring,int,TFreeFn,pointer	bindings: msg_init(msg: var ZMsg; data: cstring; size: int; ffn: TFreeFn; hint: pointer): cint	
+msg_send	zmq/bindings.html#msg_send,ZMsg,ZSocket,cint	bindings: msg_send(msg: var ZMsg; s: ZSocket; flags: cint): cint	
+msg_recv	zmq/bindings.html#msg_recv,ZMsg,ZSocket,cint	bindings: msg_recv(msg: var ZMsg; s: ZSocket; flags: cint): cint	
+msg_close	zmq/bindings.html#msg_close,ZMsg	bindings: msg_close(msg: var ZMsg): cint	
+msg_move	zmq/bindings.html#msg_move,ZMsg,ZMsg	bindings: msg_move(dest, src: var ZMsg): cint	
+msg_copy	zmq/bindings.html#msg_copy,ZMsg,ZMsg	bindings: msg_copy(dest, src: var ZMsg): cint	
+msg_data	zmq/bindings.html#msg_data,ZMsg	bindings: msg_data(msg: var ZMsg): pointer	
+msg_size	zmq/bindings.html#msg_size,ZMsg	bindings: msg_size(msg: var ZMsg): int	
+msg_more	zmq/bindings.html#msg_more,ZMsg	bindings: msg_more(msg: var ZMsg): cint	
+msg_get	zmq/bindings.html#msg_get,ZMsg,cint	bindings: msg_get(msg: var ZMsg; option: cint): cint	
+msg_set	zmq/bindings.html#msg_set,ZMsg,cint,cint	bindings: msg_set(msg: var ZMsg; option: cint; optval: cint): cint	
+ZMQ_PAIR	zmq/bindings.html#ZMQ_PAIR	bindings: ZMQ_PAIR	
+ZMQ_PUB	zmq/bindings.html#ZMQ_PUB	bindings: ZMQ_PUB	
+ZMQ_SUB	zmq/bindings.html#ZMQ_SUB	bindings: ZMQ_SUB	
+ZMQ_REQ	zmq/bindings.html#ZMQ_REQ	bindings: ZMQ_REQ	
+ZMQ_REP	zmq/bindings.html#ZMQ_REP	bindings: ZMQ_REP	
+ZMQ_DEALER	zmq/bindings.html#ZMQ_DEALER	bindings: ZMQ_DEALER	
+ZMQ_ROUTER	zmq/bindings.html#ZMQ_ROUTER	bindings: ZMQ_ROUTER	
+ZMQ_PULL	zmq/bindings.html#ZMQ_PULL	bindings: ZMQ_PULL	
+ZMQ_PUSH	zmq/bindings.html#ZMQ_PUSH	bindings: ZMQ_PUSH	
+ZMQ_XPUB	zmq/bindings.html#ZMQ_XPUB	bindings: ZMQ_XPUB	
+ZMQ_XSUB	zmq/bindings.html#ZMQ_XSUB	bindings: ZMQ_XSUB	
+ZMQ_STREAM	zmq/bindings.html#ZMQ_STREAM	bindings: ZMQ_STREAM	
+ZMQ_SERVER	zmq/bindings.html#ZMQ_SERVER	bindings: ZMQ_SERVER	
+ZMQ_CLIENT	zmq/bindings.html#ZMQ_CLIENT	bindings: ZMQ_CLIENT	
+PAIR	zmq/bindings.html#PAIR	ZSocketType.PAIR	
+PUB	zmq/bindings.html#PUB	ZSocketType.PUB	
+SUB	zmq/bindings.html#SUB	ZSocketType.SUB	
+REQ	zmq/bindings.html#REQ	ZSocketType.REQ	
+REP	zmq/bindings.html#REP	ZSocketType.REP	
+DEALER	zmq/bindings.html#DEALER	ZSocketType.DEALER	
+ROUTER	zmq/bindings.html#ROUTER	ZSocketType.ROUTER	
+PULL	zmq/bindings.html#PULL	ZSocketType.PULL	
+PUSH	zmq/bindings.html#PUSH	ZSocketType.PUSH	
+XPUB	zmq/bindings.html#XPUB	ZSocketType.XPUB	
+XSUB	zmq/bindings.html#XSUB	ZSocketType.XSUB	
+STREAM	zmq/bindings.html#STREAM	ZSocketType.STREAM	
+SERVER	zmq/bindings.html#SERVER	ZSocketType.SERVER	
+CLIENT	zmq/bindings.html#CLIENT	ZSocketType.CLIENT	
+ZSocketType	zmq/bindings.html#ZSocketType	bindings: ZSocketType	
+ZMQ_XREQ	zmq/bindings.html#ZMQ_XREQ	bindings: ZMQ_XREQ	
+ZMQ_XREP	zmq/bindings.html#ZMQ_XREP	bindings: ZMQ_XREP	
+ZMQ_AFFINITY	zmq/bindings.html#ZMQ_AFFINITY	bindings: ZMQ_AFFINITY	
+ZMQ_IDENTITY	zmq/bindings.html#ZMQ_IDENTITY	bindings: ZMQ_IDENTITY	
+ZMQ_SUBSCRIBE	zmq/bindings.html#ZMQ_SUBSCRIBE	bindings: ZMQ_SUBSCRIBE	
+ZMQ_UNSUBSCRIBE	zmq/bindings.html#ZMQ_UNSUBSCRIBE	bindings: ZMQ_UNSUBSCRIBE	
+ZMQ_RATE	zmq/bindings.html#ZMQ_RATE	bindings: ZMQ_RATE	
+ZMQ_RECOVERY_IVL	zmq/bindings.html#ZMQ_RECOVERY_IVL	bindings: ZMQ_RECOVERY_IVL	
+ZMQ_SNDBUF	zmq/bindings.html#ZMQ_SNDBUF	bindings: ZMQ_SNDBUF	
+ZMQ_RCVBUF	zmq/bindings.html#ZMQ_RCVBUF	bindings: ZMQ_RCVBUF	
+ZMQ_RCVMORE	zmq/bindings.html#ZMQ_RCVMORE	bindings: ZMQ_RCVMORE	
+ZMQ_FD	zmq/bindings.html#ZMQ_FD	bindings: ZMQ_FD	
+ZMQ_EVENTS	zmq/bindings.html#ZMQ_EVENTS	bindings: ZMQ_EVENTS	
+ZMQ_TYPE	zmq/bindings.html#ZMQ_TYPE	bindings: ZMQ_TYPE	
+ZMQ_LINGER	zmq/bindings.html#ZMQ_LINGER	bindings: ZMQ_LINGER	
+ZMQ_RECONNECT_IVL	zmq/bindings.html#ZMQ_RECONNECT_IVL	bindings: ZMQ_RECONNECT_IVL	
+ZMQ_BACKLOG	zmq/bindings.html#ZMQ_BACKLOG	bindings: ZMQ_BACKLOG	
+ZMQ_RECONNECT_IVL_MAX	zmq/bindings.html#ZMQ_RECONNECT_IVL_MAX	bindings: ZMQ_RECONNECT_IVL_MAX	
+ZMQ_MAXMSGSIZE	zmq/bindings.html#ZMQ_MAXMSGSIZE	bindings: ZMQ_MAXMSGSIZE	
+ZMQ_SNDHWM	zmq/bindings.html#ZMQ_SNDHWM	bindings: ZMQ_SNDHWM	
+ZMQ_RCVHWM	zmq/bindings.html#ZMQ_RCVHWM	bindings: ZMQ_RCVHWM	
+ZMQ_MULTICAST_HOPS	zmq/bindings.html#ZMQ_MULTICAST_HOPS	bindings: ZMQ_MULTICAST_HOPS	
+ZMQ_RCVTIMEO	zmq/bindings.html#ZMQ_RCVTIMEO	bindings: ZMQ_RCVTIMEO	
+ZMQ_SNDTIMEO	zmq/bindings.html#ZMQ_SNDTIMEO	bindings: ZMQ_SNDTIMEO	
+ZMQ_LAST_ENDPOINT	zmq/bindings.html#ZMQ_LAST_ENDPOINT	bindings: ZMQ_LAST_ENDPOINT	
+ZMQ_ROUTER_MANDATORY	zmq/bindings.html#ZMQ_ROUTER_MANDATORY	bindings: ZMQ_ROUTER_MANDATORY	
+ZMQ_TCP_KEEPALIVE	zmq/bindings.html#ZMQ_TCP_KEEPALIVE	bindings: ZMQ_TCP_KEEPALIVE	
+ZMQ_TCP_KEEPALIVE_CNT	zmq/bindings.html#ZMQ_TCP_KEEPALIVE_CNT	bindings: ZMQ_TCP_KEEPALIVE_CNT	
+ZMQ_TCP_KEEPALIVE_IDLE	zmq/bindings.html#ZMQ_TCP_KEEPALIVE_IDLE	bindings: ZMQ_TCP_KEEPALIVE_IDLE	
+ZMQ_TCP_KEEPALIVE_INTVL	zmq/bindings.html#ZMQ_TCP_KEEPALIVE_INTVL	bindings: ZMQ_TCP_KEEPALIVE_INTVL	
+ZMQ_IMMEDIATE	zmq/bindings.html#ZMQ_IMMEDIATE	bindings: ZMQ_IMMEDIATE	
+ZMQ_XPUB_VERBOSE	zmq/bindings.html#ZMQ_XPUB_VERBOSE	bindings: ZMQ_XPUB_VERBOSE	
+ZMQ_ROUTER_RAW	zmq/bindings.html#ZMQ_ROUTER_RAW	bindings: ZMQ_ROUTER_RAW	
+ZMQ_MECHANISM	zmq/bindings.html#ZMQ_MECHANISM	bindings: ZMQ_MECHANISM	
+ZMQ_PLAIN_SERVER	zmq/bindings.html#ZMQ_PLAIN_SERVER	bindings: ZMQ_PLAIN_SERVER	
+ZMQ_PLAIN_USERNAME	zmq/bindings.html#ZMQ_PLAIN_USERNAME	bindings: ZMQ_PLAIN_USERNAME	
+ZMQ_PLAIN_PASSWORD	zmq/bindings.html#ZMQ_PLAIN_PASSWORD	bindings: ZMQ_PLAIN_PASSWORD	
+ZMQ_CURVE_SERVER	zmq/bindings.html#ZMQ_CURVE_SERVER	bindings: ZMQ_CURVE_SERVER	
+ZMQ_CURVE_PUBLICKEY	zmq/bindings.html#ZMQ_CURVE_PUBLICKEY	bindings: ZMQ_CURVE_PUBLICKEY	
+ZMQ_CURVE_SECRETKEY	zmq/bindings.html#ZMQ_CURVE_SECRETKEY	bindings: ZMQ_CURVE_SECRETKEY	
+ZMQ_CURVE_SERVERKEY	zmq/bindings.html#ZMQ_CURVE_SERVERKEY	bindings: ZMQ_CURVE_SERVERKEY	
+ZMQ_PROBE_ROUTER	zmq/bindings.html#ZMQ_PROBE_ROUTER	bindings: ZMQ_PROBE_ROUTER	
+ZMQ_REQ_CORRELATE	zmq/bindings.html#ZMQ_REQ_CORRELATE	bindings: ZMQ_REQ_CORRELATE	
+ZMQ_REQ_RELAXED	zmq/bindings.html#ZMQ_REQ_RELAXED	bindings: ZMQ_REQ_RELAXED	
+ZMQ_CONFLATE	zmq/bindings.html#ZMQ_CONFLATE	bindings: ZMQ_CONFLATE	
+ZMQ_ZAP_DOMAIN	zmq/bindings.html#ZMQ_ZAP_DOMAIN	bindings: ZMQ_ZAP_DOMAIN	
+ZMQ_ROUTER_HANDOVER	zmq/bindings.html#ZMQ_ROUTER_HANDOVER	bindings: ZMQ_ROUTER_HANDOVER	
+ZMQ_TOS	zmq/bindings.html#ZMQ_TOS	bindings: ZMQ_TOS	
+ZMQ_CONNECT_RID	zmq/bindings.html#ZMQ_CONNECT_RID	bindings: ZMQ_CONNECT_RID	
+ZMQ_GSSAPI_SERVER	zmq/bindings.html#ZMQ_GSSAPI_SERVER	bindings: ZMQ_GSSAPI_SERVER	
+ZMQ_GSSAPI_PRINCIPAL	zmq/bindings.html#ZMQ_GSSAPI_PRINCIPAL	bindings: ZMQ_GSSAPI_PRINCIPAL	
+ZMQ_GSSAPI_SERVICE_PRINCIPAL	zmq/bindings.html#ZMQ_GSSAPI_SERVICE_PRINCIPAL	bindings: ZMQ_GSSAPI_SERVICE_PRINCIPAL	
+ZMQ_GSSAPI_PLAINTEXT	zmq/bindings.html#ZMQ_GSSAPI_PLAINTEXT	bindings: ZMQ_GSSAPI_PLAINTEXT	
+ZMQ_HANDSHAKE_IVL	zmq/bindings.html#ZMQ_HANDSHAKE_IVL	bindings: ZMQ_HANDSHAKE_IVL	
+ZMQ_SOCKS_PROXY	zmq/bindings.html#ZMQ_SOCKS_PROXY	bindings: ZMQ_SOCKS_PROXY	
+ZMQ_XPUB_NODROP	zmq/bindings.html#ZMQ_XPUB_NODROP	bindings: ZMQ_XPUB_NODROP	
+ZMQ_BLOCKY	zmq/bindings.html#ZMQ_BLOCKY	bindings: ZMQ_BLOCKY	
+ZMQ_XPUB_MANUAL	zmq/bindings.html#ZMQ_XPUB_MANUAL	bindings: ZMQ_XPUB_MANUAL	
+ZMQ_XPUB_WELCOME_MSG	zmq/bindings.html#ZMQ_XPUB_WELCOME_MSG	bindings: ZMQ_XPUB_WELCOME_MSG	
+ZMQ_STREAM_NOTIFY	zmq/bindings.html#ZMQ_STREAM_NOTIFY	bindings: ZMQ_STREAM_NOTIFY	
+ZMQ_INVERT_MATCHING	zmq/bindings.html#ZMQ_INVERT_MATCHING	bindings: ZMQ_INVERT_MATCHING	
+ZMQ_HEARTBEAT_IVL	zmq/bindings.html#ZMQ_HEARTBEAT_IVL	bindings: ZMQ_HEARTBEAT_IVL	
+ZMQ_HEARTBEAT_TTL	zmq/bindings.html#ZMQ_HEARTBEAT_TTL	bindings: ZMQ_HEARTBEAT_TTL	
+ZMQ_HEARTBEAT_TIMEOUT	zmq/bindings.html#ZMQ_HEARTBEAT_TIMEOUT	bindings: ZMQ_HEARTBEAT_TIMEOUT	
+ZMQ_XPUB_VERBOSE_UNSUBSCRIBE	zmq/bindings.html#ZMQ_XPUB_VERBOSE_UNSUBSCRIBE	bindings: ZMQ_XPUB_VERBOSE_UNSUBSCRIBE	
+ZMQ_CONNECT_TIMEOUT	zmq/bindings.html#ZMQ_CONNECT_TIMEOUT	bindings: ZMQ_CONNECT_TIMEOUT	
+ZMQ_TCP_RETRANSMIT_TIMEOUT	zmq/bindings.html#ZMQ_TCP_RETRANSMIT_TIMEOUT	bindings: ZMQ_TCP_RETRANSMIT_TIMEOUT	
+ZMQ_THREAD_SAFE	zmq/bindings.html#ZMQ_THREAD_SAFE	bindings: ZMQ_THREAD_SAFE	
+AFFINITY	zmq/bindings.html#AFFINITY	ZSockOptions.AFFINITY	
+IDENTITY	zmq/bindings.html#IDENTITY	ZSockOptions.IDENTITY	
+SUBSCRIBE	zmq/bindings.html#SUBSCRIBE	ZSockOptions.SUBSCRIBE	
+UNSUBSCRIBE	zmq/bindings.html#UNSUBSCRIBE	ZSockOptions.UNSUBSCRIBE	
+RATE	zmq/bindings.html#RATE	ZSockOptions.RATE	
+RECOVERY_IVL	zmq/bindings.html#RECOVERY_IVL	ZSockOptions.RECOVERY_IVL	
+SNDBUF	zmq/bindings.html#SNDBUF	ZSockOptions.SNDBUF	
+RCVBUF	zmq/bindings.html#RCVBUF	ZSockOptions.RCVBUF	
+RCVMORE	zmq/bindings.html#RCVMORE	ZSockOptions.RCVMORE	
+FD	zmq/bindings.html#FD	ZSockOptions.FD	
+EVENTS	zmq/bindings.html#EVENTS	ZSockOptions.EVENTS	
+TYPE	zmq/bindings.html#TYPE	ZSockOptions.TYPE	
+LINGER	zmq/bindings.html#LINGER	ZSockOptions.LINGER	
+RECONNECT_IVL	zmq/bindings.html#RECONNECT_IVL	ZSockOptions.RECONNECT_IVL	
+BACKLOG	zmq/bindings.html#BACKLOG	ZSockOptions.BACKLOG	
+RECONNECT_IVL_MAX	zmq/bindings.html#RECONNECT_IVL_MAX	ZSockOptions.RECONNECT_IVL_MAX	
+MAXMSGSIZE	zmq/bindings.html#MAXMSGSIZE	ZSockOptions.MAXMSGSIZE	
+SNDHWM	zmq/bindings.html#SNDHWM	ZSockOptions.SNDHWM	
+RCVHWM	zmq/bindings.html#RCVHWM	ZSockOptions.RCVHWM	
+MULTICAST_HOPS	zmq/bindings.html#MULTICAST_HOPS	ZSockOptions.MULTICAST_HOPS	
+RCVTIMEO	zmq/bindings.html#RCVTIMEO	ZSockOptions.RCVTIMEO	
+SNDTIMEO	zmq/bindings.html#SNDTIMEO	ZSockOptions.SNDTIMEO	
+LAST_ENDPOINT	zmq/bindings.html#LAST_ENDPOINT	ZSockOptions.LAST_ENDPOINT	
+ROUTER_MANDATORY	zmq/bindings.html#ROUTER_MANDATORY	ZSockOptions.ROUTER_MANDATORY	
+TCP_KEEPALIVE	zmq/bindings.html#TCP_KEEPALIVE	ZSockOptions.TCP_KEEPALIVE	
+TCP_KEEPALIVE_CNT	zmq/bindings.html#TCP_KEEPALIVE_CNT	ZSockOptions.TCP_KEEPALIVE_CNT	
+TCP_KEEPALIVE_IDLE	zmq/bindings.html#TCP_KEEPALIVE_IDLE	ZSockOptions.TCP_KEEPALIVE_IDLE	
+TCP_KEEPALIVE_INTVL	zmq/bindings.html#TCP_KEEPALIVE_INTVL	ZSockOptions.TCP_KEEPALIVE_INTVL	
+TCP_ACCEPT_FILTER	zmq/bindings.html#TCP_ACCEPT_FILTER	ZSockOptions.TCP_ACCEPT_FILTER	
+IMMEDIATE	zmq/bindings.html#IMMEDIATE	ZSockOptions.IMMEDIATE	
+XPUB_VERBOSE	zmq/bindings.html#XPUB_VERBOSE	ZSockOptions.XPUB_VERBOSE	
+ROUTER_RAW	zmq/bindings.html#ROUTER_RAW	ZSockOptions.ROUTER_RAW	
+IPV6	zmq/bindings.html#IPV6	ZSockOptions.IPV6	
+MECHANISM	zmq/bindings.html#MECHANISM	ZSockOptions.MECHANISM	
+PLAIN_SERVER	zmq/bindings.html#PLAIN_SERVER	ZSockOptions.PLAIN_SERVER	
+PLAIN_USERNAME	zmq/bindings.html#PLAIN_USERNAME	ZSockOptions.PLAIN_USERNAME	
+PLAIN_PASSWORD	zmq/bindings.html#PLAIN_PASSWORD	ZSockOptions.PLAIN_PASSWORD	
+CURVE_SERVER	zmq/bindings.html#CURVE_SERVER	ZSockOptions.CURVE_SERVER	
+CURVE_PUBLICKEY	zmq/bindings.html#CURVE_PUBLICKEY	ZSockOptions.CURVE_PUBLICKEY	
+CURVE_SECRETKEY	zmq/bindings.html#CURVE_SECRETKEY	ZSockOptions.CURVE_SECRETKEY	
+CURVE_SERVERKEY	zmq/bindings.html#CURVE_SERVERKEY	ZSockOptions.CURVE_SERVERKEY	
+PROBE_ROUTER	zmq/bindings.html#PROBE_ROUTER	ZSockOptions.PROBE_ROUTER	
+REQ_CORRELATE	zmq/bindings.html#REQ_CORRELATE	ZSockOptions.REQ_CORRELATE	
+REQ_RELAXED	zmq/bindings.html#REQ_RELAXED	ZSockOptions.REQ_RELAXED	
+CONFLATE	zmq/bindings.html#CONFLATE	ZSockOptions.CONFLATE	
+ZAP_DOMAIN	zmq/bindings.html#ZAP_DOMAIN	ZSockOptions.ZAP_DOMAIN	
+ROUTER_HANDOVER	zmq/bindings.html#ROUTER_HANDOVER	ZSockOptions.ROUTER_HANDOVER	
+TOS	zmq/bindings.html#TOS	ZSockOptions.TOS	
+CONNECT_RID	zmq/bindings.html#CONNECT_RID	ZSockOptions.CONNECT_RID	
+GSSAPI_SERVER	zmq/bindings.html#GSSAPI_SERVER	ZSockOptions.GSSAPI_SERVER	
+GSSAPI_PRINCIPAL	zmq/bindings.html#GSSAPI_PRINCIPAL	ZSockOptions.GSSAPI_PRINCIPAL	
+GSSAPI_SERVICE_PRINCIPAL	zmq/bindings.html#GSSAPI_SERVICE_PRINCIPAL	ZSockOptions.GSSAPI_SERVICE_PRINCIPAL	
+GSSAPI_PLAINTEXT	zmq/bindings.html#GSSAPI_PLAINTEXT	ZSockOptions.GSSAPI_PLAINTEXT	
+HANDSHAKE_IVL	zmq/bindings.html#HANDSHAKE_IVL	ZSockOptions.HANDSHAKE_IVL	
+SOCKS_PROXY	zmq/bindings.html#SOCKS_PROXY	ZSockOptions.SOCKS_PROXY	
+XPUB_NODROP	zmq/bindings.html#XPUB_NODROP	ZSockOptions.XPUB_NODROP	
+BLOCKY	zmq/bindings.html#BLOCKY	ZSockOptions.BLOCKY	
+XPUB_MANUAL	zmq/bindings.html#XPUB_MANUAL	ZSockOptions.XPUB_MANUAL	
+XPUB_WELCOME_MSG	zmq/bindings.html#XPUB_WELCOME_MSG	ZSockOptions.XPUB_WELCOME_MSG	
+STREAM_NOTIFY	zmq/bindings.html#STREAM_NOTIFY	ZSockOptions.STREAM_NOTIFY	
+INVERT_MATCHING	zmq/bindings.html#INVERT_MATCHING	ZSockOptions.INVERT_MATCHING	
+HEARTBEAT_IVL	zmq/bindings.html#HEARTBEAT_IVL	ZSockOptions.HEARTBEAT_IVL	
+HEARTBEAT_TTL	zmq/bindings.html#HEARTBEAT_TTL	ZSockOptions.HEARTBEAT_TTL	
+HEARTBEAT_TIMEOUT	zmq/bindings.html#HEARTBEAT_TIMEOUT	ZSockOptions.HEARTBEAT_TIMEOUT	
+XPUB_VERBOSE_UNSUBSCRIBE	zmq/bindings.html#XPUB_VERBOSE_UNSUBSCRIBE	ZSockOptions.XPUB_VERBOSE_UNSUBSCRIBE	
+CONNECT_TIMEOUT	zmq/bindings.html#CONNECT_TIMEOUT	ZSockOptions.CONNECT_TIMEOUT	
+TCP_RETRANSMIT_TIMEOUT	zmq/bindings.html#TCP_RETRANSMIT_TIMEOUT	ZSockOptions.TCP_RETRANSMIT_TIMEOUT	
+THREAD_SAFE	zmq/bindings.html#THREAD_SAFE	ZSockOptions.THREAD_SAFE	
+ZSockOptions	zmq/bindings.html#ZSockOptions	bindings: ZSockOptions	
+ZMQ_MORE	zmq/bindings.html#ZMQ_MORE	bindings: ZMQ_MORE	
+ZMQ_SRCFD	zmq/bindings.html#ZMQ_SRCFD	bindings: ZMQ_SRCFD	
+ZMQ_SHARED	zmq/bindings.html#ZMQ_SHARED	bindings: ZMQ_SHARED	
+MORE	zmq/bindings.html#MORE	ZMsgOptions.MORE	
+SRCFD	zmq/bindings.html#SRCFD	ZMsgOptions.SRCFD	
+SHARED	zmq/bindings.html#SHARED	ZMsgOptions.SHARED	
+ZMsgOptions	zmq/bindings.html#ZMsgOptions	bindings: ZMsgOptions	
+ZMQ_DONTWAIT	zmq/bindings.html#ZMQ_DONTWAIT	bindings: ZMQ_DONTWAIT	
+ZMQ_SNDMORE	zmq/bindings.html#ZMQ_SNDMORE	bindings: ZMQ_SNDMORE	
+NOFLAGS	zmq/bindings.html#NOFLAGS	ZSendRecvOptions.NOFLAGS	
+DONTWAIT	zmq/bindings.html#DONTWAIT	ZSendRecvOptions.DONTWAIT	
+SNDMORE	zmq/bindings.html#SNDMORE	ZSendRecvOptions.SNDMORE	
+ZSendRecvOptions	zmq/bindings.html#ZSendRecvOptions	bindings: ZSendRecvOptions	
+ZMQ_NULL	zmq/bindings.html#ZMQ_NULL	bindings: ZMQ_NULL	
+ZMQ_PLAIN	zmq/bindings.html#ZMQ_PLAIN	bindings: ZMQ_PLAIN	
+ZMQ_CURVE	zmq/bindings.html#ZMQ_CURVE	bindings: ZMQ_CURVE	
+ZMQ_GSSAPI	zmq/bindings.html#ZMQ_GSSAPI	bindings: ZMQ_GSSAPI	
+ZMQ_IPV4ONLY	zmq/bindings.html#ZMQ_IPV4ONLY	bindings: ZMQ_IPV4ONLY	
+ZMQ_TCP_ACCEPT_FILTER	zmq/bindings.html#ZMQ_TCP_ACCEPT_FILTER	bindings: ZMQ_TCP_ACCEPT_FILTER	
+ZMQ_IPC_FILTER_PID	zmq/bindings.html#ZMQ_IPC_FILTER_PID	bindings: ZMQ_IPC_FILTER_PID	
+ZMQ_IPC_FILTER_UID	zmq/bindings.html#ZMQ_IPC_FILTER_UID	bindings: ZMQ_IPC_FILTER_UID	
+ZMQ_IPC_FILTER_GID	zmq/bindings.html#ZMQ_IPC_FILTER_GID	bindings: ZMQ_IPC_FILTER_GID	
+ZMQ_DELAY_ATTACH_ON_CONNECT	zmq/bindings.html#ZMQ_DELAY_ATTACH_ON_CONNECT	bindings: ZMQ_DELAY_ATTACH_ON_CONNECT	
+ZMQ_NOBLOCK	zmq/bindings.html#ZMQ_NOBLOCK	bindings: ZMQ_NOBLOCK	
+ZMQ_FAIL_UNROUTABLE	zmq/bindings.html#ZMQ_FAIL_UNROUTABLE	bindings: ZMQ_FAIL_UNROUTABLE	
+ZMQ_ROUTER_BEHAVIOR	zmq/bindings.html#ZMQ_ROUTER_BEHAVIOR	bindings: ZMQ_ROUTER_BEHAVIOR	
+ZMQ_EVENT_CONNECTED	zmq/bindings.html#ZMQ_EVENT_CONNECTED	bindings: ZMQ_EVENT_CONNECTED	
+ZMQ_EVENT_CONNECT_DELAYED	zmq/bindings.html#ZMQ_EVENT_CONNECT_DELAYED	bindings: ZMQ_EVENT_CONNECT_DELAYED	
+ZMQ_EVENT_CONNECT_RETRIED	zmq/bindings.html#ZMQ_EVENT_CONNECT_RETRIED	bindings: ZMQ_EVENT_CONNECT_RETRIED	
+ZMQ_EVENT_LISTENING	zmq/bindings.html#ZMQ_EVENT_LISTENING	bindings: ZMQ_EVENT_LISTENING	
+ZMQ_EVENT_BIND_FAILED	zmq/bindings.html#ZMQ_EVENT_BIND_FAILED	bindings: ZMQ_EVENT_BIND_FAILED	
+ZMQ_EVENT_ACCEPTED	zmq/bindings.html#ZMQ_EVENT_ACCEPTED	bindings: ZMQ_EVENT_ACCEPTED	
+ZMQ_EVENT_ACCEPT_FAILED	zmq/bindings.html#ZMQ_EVENT_ACCEPT_FAILED	bindings: ZMQ_EVENT_ACCEPT_FAILED	
+ZMQ_EVENT_CLOSED	zmq/bindings.html#ZMQ_EVENT_CLOSED	bindings: ZMQ_EVENT_CLOSED	
+ZMQ_EVENT_CLOSE_FAILED	zmq/bindings.html#ZMQ_EVENT_CLOSE_FAILED	bindings: ZMQ_EVENT_CLOSE_FAILED	
+ZMQ_EVENT_DISCONNECTED	zmq/bindings.html#ZMQ_EVENT_DISCONNECTED	bindings: ZMQ_EVENT_DISCONNECTED	
+ZMQ_EVENT_MONITOR_STOPPED	zmq/bindings.html#ZMQ_EVENT_MONITOR_STOPPED	bindings: ZMQ_EVENT_MONITOR_STOPPED	
+ZMQ_EVENT_ALL	zmq/bindings.html#ZMQ_EVENT_ALL	bindings: ZMQ_EVENT_ALL	
+zmq_event_t	zmq/bindings.html#zmq_event_t	bindings: zmq_event_t	
+socket	zmq/bindings.html#socket,ZContext,cint	bindings: socket(context: ZContext; theType: cint): ZSocket	
+close	zmq/bindings.html#close,ZSocket	bindings: close(s: ZSocket): cint	
+setsockopt	zmq/bindings.html#setsockopt,ZSocket,ZSockOptions,pointer,int	bindings: setsockopt(s: ZSocket; option: ZSockOptions; optval: pointer; optvallen: int): cint	
+getsockopt	zmq/bindings.html#getsockopt,ZSocket,ZSockOptions,pointer,ptr.int	bindings: getsockopt(s: ZSocket; option: ZSockOptions; optval: pointer; optvallen: ptr int): cint	
+bindAddr	zmq/bindings.html#bindAddr,ZSocket,cstring	bindings: bindAddr(s: ZSocket; address: cstring): cint	
+connect	zmq/bindings.html#connect,ZSocket,cstring	bindings: connect(s: ZSocket; address: cstring): cint	
+unbind	zmq/bindings.html#unbind,ZSocket,cstring	bindings: unbind(s: ZSocket; address: cstring): cint	
+disconnect	zmq/bindings.html#disconnect,ZSocket,cstring	bindings: disconnect(s: ZSocket; address: cstring): cint	
+send	zmq/bindings.html#send,ZSocket,pointer,int,cint	bindings: send(s: ZSocket; buf: pointer; len: int; flags: cint): cint	
+send_const	zmq/bindings.html#send_const,ZSocket,pointer,int,cint	bindings: send_const(s: ZSocket; buf: pointer; len: int; flags: cint): cint	
+recv	zmq/bindings.html#recv,ZSocket,pointer,int,cint	bindings: recv(s: ZSocket; buf: pointer; len: int; flags: cint): cint	
+socket_monitor	zmq/bindings.html#socket_monitor,ZSocket,pointer,cint	bindings: socket_monitor(s: ZSocket; address: pointer; events: cint): cint	
+sendmsg	zmq/bindings.html#sendmsg,ZSocket,ZMsg,cint	bindings: sendmsg(s: ZSocket; msg: var ZMsg; flags: cint): cint	
+recvmsg	zmq/bindings.html#recvmsg,ZSocket,ZMsg,cint	bindings: recvmsg(s: ZSocket; msg: var ZMsg; flags: cint): cint	
+ZMQ_POLLIN	zmq/bindings.html#ZMQ_POLLIN	bindings: ZMQ_POLLIN	
+ZMQ_POLLOUT	zmq/bindings.html#ZMQ_POLLOUT	bindings: ZMQ_POLLOUT	
+ZMQ_POLLERR	zmq/bindings.html#ZMQ_POLLERR	bindings: ZMQ_POLLERR	
+ZMQ_POLLPRI	zmq/bindings.html#ZMQ_POLLPRI	bindings: ZMQ_POLLPRI	
+ZPollItem	zmq/bindings.html#ZPollItem	bindings: ZPollItem	
+ZMQ_POLLITEMS_DFLT	zmq/bindings.html#ZMQ_POLLITEMS_DFLT	bindings: ZMQ_POLLITEMS_DFLT	
+poll	zmq/bindings.html#poll,ptr.UncheckedArray[ZPollItem],cint,clong	bindings: poll(items: ptr UncheckedArray[ZPollItem]; nitems: cint; timeout: clong): cint	
+proxy	zmq/bindings.html#proxy,ZSocket,ZSocket,ZSocket	bindings: proxy(frontend: ZSocket; backend: ZSocket; capture: ZSocket): cint	
+proxy_steerable	zmq/bindings.html#proxy_steerable,ZSocket,ZSocket,ZSocket,ZSocket	bindings: proxy_steerable(frontend: ZSocket; backend: ZSocket; capture: ZSocket;\n                control: ZSocket): cint	
+z85_encode	zmq/bindings.html#z85_encode,cstring,ptr.uint8,int	bindings: z85_encode(dest: cstring; data: ptr uint8; size: int): cstring	
+z85_decode	zmq/bindings.html#z85_decode,ptr.uint8,cstring	bindings: z85_decode(dest: ptr uint8; string: cstring): ptr uint8	
