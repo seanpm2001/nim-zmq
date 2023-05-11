@@ -108,12 +108,14 @@ window.addEventListener('DOMContentLoaded', main);
   <a class="reference reference-toplevel" href="#7" id="57">Types</a>
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#ZConnection"
-    title="ZConnection {.pure, final.} = object
+    title="ZConnection = ref ZConnectionImpl">ZConnection</a></li>
+  <li><a class="reference" href="#ZConnectionImpl"
+    title="ZConnectionImpl {.pure, final.} = object
   context*: ZContext         ## Zmq context. Can be 'owned' by another connection (useful for inproc protocol).
   socket*: ZSocket           ## Embedded socket.
   ownctx: bool               ## Boolean indicating if the connection owns the Zmq context
   alive: bool                ## Boolean indicating if the connections has been closed or not
-  sockaddr: string           ## Address of the embedded socket">ZConnection</a></li>
+  sockaddr: string           ## Address of the embedded socket">ZConnectionImpl</a></li>
   <li><a class="reference" href="#ZmqError"
     title="ZmqError = object of IOError
   error*: cint">ZmqError</a></li>
@@ -130,7 +132,7 @@ window.addEventListener('DOMContentLoaded', main);
   </ul>
   <ul class="simple nested-toc-section">close
       <li><a class="reference" href="#close%2CZConnection%2Cint"
-    title="close(c: var ZConnection; linger: int = 500)">close(c: var ZConnection; linger: int = 500)</a></li>
+    title="close(c: ZConnection; linger: int = 500)">close(c: ZConnection; linger: int = 500)</a></li>
 
   </ul>
   <ul class="simple nested-toc-section">connect
@@ -266,7 +268,15 @@ window.addEventListener('DOMContentLoaded', main);
 <h1><a class="toc-backref" href="#7">Types</a></h1>
 <dl class="item">
 <div id="ZConnection">
-<dt><pre><a href="connections.html#ZConnection"><span class="Identifier">ZConnection</span></a> {.<span class="Identifier">pure</span><span class="Other">,</span> <span class="Identifier">final</span>.} <span class="Other">=</span> <span class="Keyword">object</span>
+<dt><pre><a href="connections.html#ZConnection"><span class="Identifier">ZConnection</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <a href="connections.html#ZConnectionImpl"><span class="Identifier">ZConnectionImpl</span></a></pre></dt>
+<dd>
+
+
+
+</dd>
+</div>
+<div id="ZConnectionImpl">
+<dt><pre><a href="connections.html#ZConnectionImpl"><span class="Identifier">ZConnectionImpl</span></a> {.<span class="Identifier">pure</span><span class="Other">,</span> <span class="Identifier">final</span>.} <span class="Other">=</span> <span class="Keyword">object</span>
   <span class="Identifier">context</span><span class="Operator">*</span><span class="Other">:</span> <a href="bindings.html#ZContext"><span class="Identifier">ZContext</span></a>         <span class="Comment">## Zmq context. Can be 'owned' by another connection (useful for inproc protocol).</span>
   <span class="Identifier">socket</span><span class="Operator">*</span><span class="Other">:</span> <a href="bindings.html#ZSocket"><span class="Identifier">ZSocket</span></a>           <span class="Comment">## Embedded socket.</span>
   <span class="Identifier">ownctx</span><span class="Other">:</span> <span class="Identifier">bool</span>               <span class="Comment">## Boolean indicating if the connection owns the Zmq context</span>
@@ -304,13 +314,10 @@ Bind the socket to a new address The socket must disconnected / unbind beforehan
 </dd>
 </div>
 <div id="close,ZConnection,int">
-<dt><pre><span class="Keyword">proc</span> <a href="#close%2CZConnection%2Cint"><span class="Identifier">close</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="connections.html#ZConnection"><span class="Identifier">ZConnection</span></a><span class="Other">;</span> <span class="Identifier">linger</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">500</span><span class="Other">)</span> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">ZmqError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#close%2CZConnection%2Cint"><span class="Identifier">close</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <a href="connections.html#ZConnection"><span class="Identifier">ZConnection</span></a><span class="Other">;</span> <span class="Identifier">linger</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">500</span><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">ZmqError</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
 <dd>
 
-<p>Closes the <tt class="docutils literal"><span class="pre">ZConnection</span></tt>. Set socket linger to <tt class="docutils literal"><span class="pre">linger</span></tt> to drop buffered message and avoid blocking, then close the socket.</p>
-<p>If the <tt class="docutils literal"><span class="pre">ZContext</span></tt> is owned by the connection, terminate the context as well.</p>
-<p>With --gc:arc/orc <tt class="docutils literal"><span class="pre">close</span></tt> must be called before <tt class="docutils literal"><span class="pre">ZConnection</span></tt> destruction or the<tt class="docutils literal"><span class="pre">=destroy</span></tt> hook.</p>
 
 
 </dd>
@@ -623,7 +630,7 @@ raises ZmqError with error message from <tt class="docutils literal"><span class
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-03-22 15:18:42 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-05-11 14:17:02 UTC</small>
       </div>
     </div>
   </div>

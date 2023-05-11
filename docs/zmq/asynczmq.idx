@@ -7,6 +7,6 @@ register	zmq/asynczmq.html#register,AsyncZPoller,ZConnection,int,AsyncZPollCB	as
 register	zmq/asynczmq.html#register,AsyncZPoller,ZPollItem,AsyncZPollCB	asynczmq: register(poller: var AsyncZPoller; item: ZPollItem; cb: AsyncZPollCB)	
 initZPoller	zmq/asynczmq.html#initZPoller,sinkZPoller,AsyncZPollCB	asynczmq: initZPoller(poller: sink ZPoller; cb: AsyncZPollCB): AsyncZPoller	
 initZPoller	zmq/asynczmq.html#initZPoller,openArray[tuple[ZConnection,AsyncZPollCB]],cshort	asynczmq: initZPoller(args: openArray[tuple[item: ZConnection, cb: AsyncZPollCB]];\n            event: cshort): AsyncZPoller	
-pollAsync	zmq/asynczmq.html#pollAsync,AsyncZPoller,int	asynczmq: pollAsync(poller: AsyncZPoller; timeout: int = 1): Future[int]	
+pollAsync	zmq/asynczmq.html#pollAsync,AsyncZPoller,int	asynczmq: pollAsync(poller: AsyncZPoller; timeout: int = 2): Future[int]	
 receiveAsync	zmq/asynczmq.html#receiveAsync,ZConnection	asynczmq: receiveAsync(conn: ZConnection): Future[string]	
 sendAsync	zmq/asynczmq.html#sendAsync,ZConnection,string,ZSendRecvOptions	asynczmq: sendAsync(conn: ZConnection; msg: string; flags: ZSendRecvOptions = DONTWAIT): Future[\n    void]	

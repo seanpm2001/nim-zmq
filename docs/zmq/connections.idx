@@ -1,4 +1,5 @@
 ZmqError	zmq/connections.html#ZmqError	connections: ZmqError	
+ZConnectionImpl	zmq/connections.html#ZConnectionImpl	connections: ZConnectionImpl	
 ZConnection	zmq/connections.html#ZConnection	connections: ZConnection	
 zmqError	zmq/connections.html#zmqError_2	connections: zmqError()	
 newZContext	zmq/connections.html#newZContext	connections: newZContext(): ZContext	
@@ -18,7 +19,7 @@ connect	zmq/connections.html#connect,string,ZSocketType,ZContext	connections: co
 connect	zmq/connections.html#connect,string,ZSocketType	connections: connect(address: string; mode: ZSocketType): ZConnection	
 listen	zmq/connections.html#listen,string,ZSocketType,ZContext	connections: listen(address: string; mode: ZSocketType; context: ZContext): ZConnection	
 listen	zmq/connections.html#listen,string,ZSocketType	connections: listen(address: string; mode: ZSocketType): ZConnection	
-close	zmq/connections.html#close,ZConnection,int	connections: close(c: var ZConnection; linger: int = 500)	
+close	zmq/connections.html#close,ZConnection,int	connections: close(c: ZConnection; linger: int = 500)	
 send	zmq/connections.html#send,ZSocket,string,ZSendRecvOptions	connections: send(s: ZSocket; msg: string; flags: ZSendRecvOptions = NOFLAGS)	
 sendAll	zmq/connections.html#sendAll,ZSocket,varargs[string]	connections: sendAll(s: ZSocket; msg: varargs[string])	
 send	zmq/connections.html#send,ZConnection,string,ZSendRecvOptions	connections: send(c: ZConnection; msg: string; flags: ZSendRecvOptions = NOFLAGS)	
